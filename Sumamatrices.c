@@ -7,6 +7,7 @@ int main(void)
     int dx;
     int dy;
     int numero;
+    int numero2;
     int dx2;
     int dy2;
     int suma;
@@ -38,18 +39,17 @@ int main(void)
             }
         }
 
-        for (int i = 0; i < dx2; i++)
+        for (int ix = 0; ix < dx2; ix++)
         {
-            for (int j = 0; j < dy2; j++)
+            for (int jx = 0; jx < dy2; jx++)
             {
-                numero = rand() % 100;
-                numero = rand() % (numero + 1);
-                matrix[i][j] = numero;
+                numero2 = rand() % 100;
+                numero2 = rand() % (numero2 + 1);
+                matrix[ix][jx] = numero2;
             }
         }
 
-        printf(" \n");
-        printf("Tu segund Matriz es: \n");
+       
         for (int i = 0; i < dx; i++)
         {
             for (int j = 0; j < dy; j++)
@@ -59,15 +59,20 @@ int main(void)
             }
             printf("\n");
         }
-        for (int i = 0; i < dx2; i++)
+
+        printf(" \n");
+        printf("Tu segunda Matriz es: \n");
+
+        for (int ix = 0; ix < dx2; ix++)
         {
-            for (int j = 0; j < dy2; j++)
+            for (int jx = 0; jx < dy2; jx++)
             {
 
-                printf("%d ", matriz[i][j]);
+                printf("%d ", matriz[ix][jx]);
             }
             printf("\n");
         }
+
         suma = matrix[dx][dy] + matriz[dx2][dy2];
 
         printf("La suma de las matrices con numeros aleatorios es: %d\n", suma);
